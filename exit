@@ -1,0 +1,30 @@
+[33mcommit a39652a6847b6e8d2215f8efdf1fce326445be22[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: StianBrandal <Stianbrandal@tussa.com>
+Date:   Wed Aug 23 17:07:03 2023 +0200
+
+    second commit2
+
+[1mdiff --git a/Exercise1.py b/Excercise1/Exercise1.py[m
+[1msimilarity index 100%[m
+[1mrename from Exercise1.py[m
+[1mrename to Excercise1/Exercise1.py[m
+[1mdiff --git a/Exercise1_1c.py b/Excercise1/Exercise1_1c.py[m
+[1msimilarity index 100%[m
+[1mrename from Exercise1_1c.py[m
+[1mrename to Excercise1/Exercise1_1c.py[m
+[1mdiff --git a/Exercise1_2cMidpoint.py b/Excercise1/Exercise1_2cMidpoint.py[m
+[1msimilarity index 100%[m
+[1mrename from Exercise1_2cMidpoint.py[m
+[1mrename to Excercise1/Exercise1_2cMidpoint.py[m
+[1mdiff --git a/Exercise1_2cTrapezoidal.py b/Excercise1/Exercise1_2cTrapezoidal.py[m
+[1msimilarity index 100%[m
+[1mrename from Exercise1_2cTrapezoidal.py[m
+[1mrename to Excercise1/Exercise1_2cTrapezoidal.py[m
+[1mdiff --git a/Exercise1_2d.py b/Excercise1/Exercise1_2d.py[m
+[1msimilarity index 100%[m
+[1mrename from Exercise1_2d.py[m
+[1mrename to Excercise1/Exercise1_2d.py[m
+[1mdiff --git a/exercise1_2.py b/Excercise1/exercise1_2.py[m
+[1msimilarity index 100%[m
+[1mrename from exercise1_2.py[m
+[1mrename to Excercise1/exercise1_2.py[m

@@ -1,16 +1,16 @@
 import math
-print(math.pi)
+import numpy as np 
 
-even = [2, 4, 6, 8, 10]
-odd = [1, 3, 5, 7, 9]
-emptyList = []
+def asc_des_none(lst, s):
 
-numbers = even + odd
-print(numbers)
+    if(s == "Desc"):
+  
+        return sorted(lst)
+    elif (s == "Asc"):
 
-sortedNumbers = sorted(numbers)
-print(sortedNumbers)
+        return sorted(lst,reverse=True)
+    else:
+        return lst
 
-digits = sorted("1456437421")
 
-print(digits)
+print(asc_des_none([1,3,2,4],"asc"))
