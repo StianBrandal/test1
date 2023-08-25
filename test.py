@@ -105,4 +105,35 @@ def fib_fast(numb):
     return c
 
 
-print(fib_fast(10))
+#print(fib_fast(10))
+
+
+def interview(lst, tot):
+
+    maxTime = [5,5,10,10,15,15,20,20]
+    
+    arrayQ =[0 for i in range(len(lst))]
+    for i in range(0,len(maxTime)):
+        if(len(lst) < len(maxTime)):
+            return "disqualified" 
+        elif(lst[i] <= maxTime[i]):
+            
+            arrayQ[i]="qualified"
+            print(lst[i], maxTime[i],arrayQ[i] )
+        elif (lst[i] > maxTime[i]):
+            
+            arrayQ[i]="disqualified" 
+            print(lst[i], maxTime[i],arrayQ[i] )
+
+    
+    for j in range(len(arrayQ)):
+        #print(arrayQ[j])
+        if(arrayQ[j] == "disqualified" or tot > 120):
+            return "disqualified"
+
+    return "qualified"
+
+
+
+#print(interview([5, 5, 10, 10, 15, 15, 20, 20], 120))
+

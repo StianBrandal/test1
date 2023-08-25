@@ -4,7 +4,7 @@ import pandas as pd
 import statistics
 import matplotlib.pyplot as plt
 
-#https://www.kaggle.com/code/hamelg/python-for-data-21-descriptive-statistics/notebook
+#https://www.kaggle.com/code/hamelg/python-for-data-21-descriptive-statistics/notebook         https://www.youtube.com/watch?v=3mELSEnGBvA&ab_channel=DataDaft
 
 spring = pd.read_excel(r"C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/spring.xlsx")
 
