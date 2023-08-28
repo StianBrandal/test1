@@ -16,20 +16,25 @@ print(spring)
 print(spring["x"])
 
 
-mean1 = spring["x"].mean()
-print(mean1)
+meanX = spring["x"].mean()
+meanY = spring["y"].mean()
+print("Mean of X ", meanX)
+print("Mean of X ", meanY)
 
-standard_dev = statistics.stdev(spring["x"])
-print(standard_dev)
+
+standard_devX = statistics.stdev(spring["x"])
+standard_devY = statistics.stdev(spring["y"])
+print("Standard deviation of X  ",standard_devX)
+print("Standard deviation of Y  ",standard_devY)
+
 
 covMat = np.stack((spring["x"],spring["y"]),axis=0) # getting the x and y row from the excel file because if not when using np.cov on spring you get the first colum as well.
-print(np.cov(covMat))
+print("Cov = ",np.cov(covMat))
 
 
-print()
-print(covMat)
+
 corr = np.corrcoef(covMat)
-print(corr)
+print("Cor =",  corr)
 
 
 
@@ -57,12 +62,12 @@ yAxis = covMat[1] #[2,4,6,1] #
 #plt.show()
 
 # scatterplots 
-plt.scatter(xAxis,yAxis)
-plt.show()
+# plt.scatter(xAxis,yAxis)
+# plt.show()
 
 
 
-plt.hist()
+# plt.hist()
 
 
 #print(svalbard_met)
