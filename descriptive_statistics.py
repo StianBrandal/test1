@@ -8,18 +8,18 @@ import matplotlib.pyplot as plt
 
 spring = pd.read_excel(r"C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/spring.xlsx")
 
-svalbard_met = pd.read_csv(r"C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/svalbard_met.csv")
+#svalbard_met = pd.read_csv(r"C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/svalbard_met.csv")
 
 
 
-print(spring)
+#print(spring)
 print(spring["x"])
 
 
 meanX = spring["x"].mean()
 meanY = spring["y"].mean()
 print("Mean of X ", meanX)
-print("Mean of X ", meanY)
+print("Mean of Y ", meanY)
 
 
 standard_devX = statistics.stdev(spring["x"])
