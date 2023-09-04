@@ -7,33 +7,48 @@ from scipy.stats import linregress
 import statsmodels.api as sm
 
 svalvard_met = pd.read_csv("C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/svalbard_met.csv", delimiter=";",
-                           dtype={"Tid(norsk normaltid)":str})
+                           dtype={"Tid(norsk normaltid)":str}) # "Homogenisert middeltemperatur (mnd)":np.float64 ,
 
-svalvard_metNr =pd.read_csv("C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/svalbard_met.csv", delimiter=";",
-                           dtype={"Tid(norsk normaltid)":str})
+svalvard_met1 = pd.read_csv("C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/svalbard_met.csv", delimiter=";",
+                           dtype={"Tid(norsk normaltid)":str}) # "Homogenisert middeltemperatur (mnd)":np.float64 ,
+
 #print(svalvard_met.iloc[[10]])
 svalvard_met['Tid(norsk normaltid)'] = pd.to_datetime(svalvard_met['Tid(norsk normaltid)'],format="%m.%Y")
 svalvard_met['Tid(norsk normaltid)']=svalvard_met['Tid(norsk normaltid)'].map(dt.datetime.toordinal)
 
-#svalvard_met["Homogenisert middeltemperatur (mnd)"] = pd.to_numeric(svalvard_met["Homogenisert middeltemperatur (mnd)"],
-#                                                                    errors='coerce')
-
+#svalvard_met["Homogenisert middeltemperatur (mnd)"] = pd.to_numeric(svalvard_met["Homogenisert middeltemperatur (mnd)"],downcast="float"#)
+#                                                                    ,errors='coerce')
+#temp = pd.to_numeric(svalvard_met["Homogenisert middeltemperatur (mnd)"],downcast="float")#) ,errors='coerce')
 dates = svalvard_met["Tid(norsk normaltid)"]
-temp = svalvard_met["Homogenisert middeltemperatur (mnd)"] 
+temp = svalvard_met1["Homogenisert middeltemperatur (mnd)"] 
 
-testVar = float(temp.loc[[3]])
-print(type(temp), testVar)
+print(temp)
+
+# for i in range(1,len(temp)) :
+#     #print(temp.loc[i])
+#     tempvar = (temp.loc[i])
+#     print(tempvar,"hi am her")
+#     if tempvar == "NAN":
+#         counter +=1
+
+
+
+
+# print(svalvard_met)
+# testVar = (temp.loc[[10]])
+# print(testVar)
+# print(type(temp.loc[[10]]))
 # for i in range(len(temp)):
 #     print(temp.loc[[i]])
 
 
-# plt.scatter(dates,temp)
-# plt.show()
+plt.scatter(dates,temp)
+plt.show()
 
-# slope, intercept, r, p, se = linregress(dates, temp)
-# result = linregress(dates, temp)
-# print(result)
-# print(result.slope, result.intercept_stderr)
+slope, intercept, r, p, se = linregress(dates, temp)
+result = linregress(dates, temp)
+print(result)
+print(result.slope, result.intercept_stderr)
 
 
 
