@@ -6,23 +6,16 @@ import matplotlib.dates as mdates
 from scipy.stats import linregress
 import statsmodels.api as sm
 
-svalvard_met = pd.read_csv("C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/svalbard_met.csv", delimiter=";",
-                           dtype={"Tid(norsk normaltid)":str}) # "Homogenisert middeltemperatur (mnd)":np.float64 ,
+svalvard_met = pd.read_csv("C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/svalbard_met.csv", sep=";", decimal=",") # "Homogenisert middeltemperatur (mnd)":np.float64 , "Homogenisert middeltemperatur (mnd)":str}
 
-svalvard_met1 = pd.read_csv("C:/Users/stian/OneDrive/Documents/Skule/ADA501/Øvinger/Øving 2/svalbard_met.csv", delimiter=";",
-                           dtype={"Tid(norsk normaltid)":str}) # "Homogenisert middeltemperatur (mnd)":np.float64 ,
 
-#print(svalvard_met.iloc[[10]])
 svalvard_met['Tid(norsk normaltid)'] = pd.to_datetime(svalvard_met['Tid(norsk normaltid)'],format="%m.%Y")
 svalvard_met['Tid(norsk normaltid)']=svalvard_met['Tid(norsk normaltid)'].map(dt.datetime.toordinal)
 
-#svalvard_met["Homogenisert middeltemperatur (mnd)"] = pd.to_numeric(svalvard_met["Homogenisert middeltemperatur (mnd)"],downcast="float"#)
-#                                                                    ,errors='coerce')
-#temp = pd.to_numeric(svalvard_met["Homogenisert middeltemperatur (mnd)"],downcast="float")#) ,errors='coerce')
-dates = svalvard_met["Tid(norsk normaltid)"]
-temp = svalvard_met1["Homogenisert middeltemperatur (mnd)"] 
 
-print(temp)
+dates = svalvard_met["Tid(norsk normaltid)"]
+temp = svalvard_met["Homogenisert middeltemperatur (mnd)"] 
+
 
 # for i in range(1,len(temp)) :
 #     #print(temp.loc[i])
